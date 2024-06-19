@@ -1,7 +1,7 @@
 <html lang="es"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro de Compras</title>
+    <title>Array To Excel</title>
     <link rel="stylesheet" href="recursos/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="recursos/css/site.css?v=MftKk_Dl6T7dEmsIjqGv2uBKatQlxWlkRm2f9VL-UFU">
     <link href="recursos/multimedia/img/favicon.ico" rel="icon" type="image/x-icon" /> 
@@ -9,15 +9,15 @@
     <script src="recursos/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="recursos/lib/xlsx/xlsx.full.min.js"></script>
     <script src="recursos/js/shared.js"></script>
-    <script src="recursos/js/site.js"></script>
+    <script src="recursos/js/masterArrayToXLS.js"></script>
 </head>
 <body>
     <header id="header-placeholder">
     </header>
 
 
-    <div  class="container">
-            <div class="container">
+
+ <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
 
@@ -48,8 +48,8 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label for="formFileMultiple" class="form-label">Seleccione almenos un archivo JSON</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple="" accept=".json">
+                    <label for="textarray" class="form-label">Introdusca un Array.</label>
+                    <textarea id="textarray"  name="w3review" rows="12" class="form-control w-100"></textarea>
                 </div>
             </div>
 
@@ -70,12 +70,11 @@
 
         </div>
     </div>
-</div>
 
-<div id="divTable">
-</div>
+
+
 
     </div>
-    <footer id="footer-placeholder" class="footer text-muted position-absolute bottom-0">
+    <footer id="footer-placeholder"  class="footer text-muted position-absolute bottom-0">
     </footer>
 </body></html>
