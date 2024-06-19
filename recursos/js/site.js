@@ -179,38 +179,38 @@ return !str || str.trim() === '';
 
 
 
-function jsonToTable(jsonArray) {
-    if (!Array.isArray(jsonArray) || jsonArray.length === 0) {
-        return '<p>No data available</p>';
-    }
+// function jsonToTable(jsonArray) {
+//     if (!Array.isArray(jsonArray) || jsonArray.length === 0) {
+//         return '<p>No data available</p>';
+//     }
 
-    // Get the headers
-    const headers = Object.keys(jsonArray[0]);
+//     // Get the headers
+//     const headers = Object.keys(jsonArray[0]);
 
-    // Start building the HTML table
+//     // Start building the HTML table
 
     
-    let tableHtml = '<table id="example" class="table table-striped text-white dataTable" style="width: 100%;" aria-describedby="example_info"><thead><tr>';
+//     let tableHtml = '<table id="example" class="table table-striped text-white dataTable" style="width: 100%;" aria-describedby="example_info"><thead><tr>';
 
-    // Add table headers
-    headers.forEach(header => {
-        tableHtml += `<th>${header}</th>`;
-    });
-    tableHtml += '</tr></thead><tbody>';
+//     // Add table headers
+//     headers.forEach(header => {
+//         tableHtml += `<th>${header}</th>`;
+//     });
+//     tableHtml += '</tr></thead><tbody>';
 
-    // Add table rows
-    jsonArray.forEach(item => {
-        tableHtml += '<tr>';
-        headers.forEach(header => {
-            tableHtml += `<td>${item[header]}</td>`;
-        });
-        tableHtml += '</tr>';
-    });
+//     // Add table rows
+//     jsonArray.forEach(item => {
+//         tableHtml += '<tr>';
+//         headers.forEach(header => {
+//             tableHtml += `<td>${item[header]}</td>`;
+//         });
+//         tableHtml += '</tr>';
+//     });
 
-    tableHtml += '</tbody></table>';
+//     tableHtml += '</tbody></table>';
 
-    return tableHtml;
-}
+//     return tableHtml;
+// }
 
     // Función para convertir un JSON en una hoja de cálculo y descargarla
     function TabularJson(json) {
