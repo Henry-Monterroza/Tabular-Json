@@ -6,9 +6,12 @@ $(document).ready(function(){
     // Función para obtener el header y agregarlo al DOM
     $.get(headerUrl, function(data){
         $('#header-placeholder').html(data);
+        $("#cuerpo-main").removeClass('collapse')
     }).fail(function() {
         console.error('Error al obtener el header.');
     });
+
+
 
    // Función para obtener el footer y agregarlo al DOM
     $.get(footerUrl, function(data){

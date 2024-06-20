@@ -24,6 +24,64 @@ $(document).ready(function () {
     // Asignar la cadena JSON al placeholder del campo de texto
     $("#textarray").attr("placeholder", jsonString);
 
+    $("#ArrayEjemplo").val(`[
+        {
+            "id": 1,
+            "nombre": "Juan",
+            "edad": 28,
+            "ciudad": "Madrid",
+            "ocupacion": "Ingeniero"
+        },
+        {
+            "id": 2,
+            "nombre": "María",
+            "edad": 34,
+            "ciudad": "Barcelona",
+            "ocupacion": "Diseñadora"
+        },
+        {
+            "id": 3,
+            "nombre": "Carlos",
+            "edad": 22,
+            "ciudad": "Valencia",
+            "ocupacion": "Estudiante"
+        },
+        {
+            "id": 4,
+            "nombre": "Ana",
+            "edad": 45,
+            "ciudad": "Sevilla",
+            "ocupacion": "Médico"
+        },
+        {
+            "id": 5,
+            "nombre": "Luis",
+            "edad": 30,
+            "ciudad": "Zaragoza",
+            "ocupacion": "Abogado"
+        }
+    ]`);
+
+
+    $('#copyButton').click(function() {
+    let textArea = $("#ArrayEjemplo");
+
+    textArea.prop("disabled",false);
+        textArea.focus();
+        textArea.select();
+        try {
+            textArea.select();
+            const success = document.execCommand('copy');
+            console.log(`Text copy was ${success ? 'successful' : 'unsuccessful'}.`);
+          } catch (err) {
+            console.error(err.name, err.message);
+          }
+
+          textArea.prop("disabled",true);
+
+    });
+
+
     // Evento click del botón exportar
     $("#exportBtn").click(async function () {
         let stringarray = $("#textarray").val();
