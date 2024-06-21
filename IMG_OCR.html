@@ -9,31 +9,28 @@
     <link href="recursos/multimedia/img/favicon.ico" rel="icon" type="image/x-icon" />
     <script src="recursos/lib/jquery/dist/jquery.min.js"></script>
     <script src="recursos/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="recursos/lib/xlsx/xlsx.full.min.js"></script>
+    <script src="recursos/lib/ocr/tesseract.js"></script>
     <script src="recursos/js/shared.js"></script>
-    <script src="recursos/js/site.js"></script>
+    <script src="recursos/js/img_ocr.js"></script>
 </head>
 
 <body>
     <header id="header-placeholder">
     </header>
-
-
     <div class="container collapse" id="cuerpo-main">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-6">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="mb-4 text-center">Extraer datos Para libro de Compras</h2>
+                        <h2 class="mb-4 text-center">Extraer texto de Imagen [Español]</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <label for="filename">Nombre del Archivo:</label>
-                        <input type="text" class="form-control" id="filename" placeholder="Nombre del archivo">
+                    <div class="col-md-6">     
+                           <input class="form-control  mt-4" type="file" id="imgFile" accept="image/*">               
                     </div>
                     <div class="col-md-6">
-                        <button type="button" class="btn btn-outline-success mt-4 w-100" id="exportBtn">
+                        <button type="button" class="btn btn-outline-success mt-4 w-100" id="AplicarOCR">
                             <svg width="16" height="16" fill="currentColor" class="bi bi-cloud-upload"
                                 viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -42,31 +39,33 @@
                                 <path fill-rule="evenodd"
                                     d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z">
                                 </path>
-                            </svg> Exportar Datos a Excel
+                            </svg> Extraer Texto
                         </button>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <label for="formFileMultiple" class="form-label">Seleccione almenos un archivo JSON</label>
-                        <input class="form-control" type="file" id="formFileMultiple" multiple="" accept=".json">
-                    </div>
-                </div>
-
                 <div class="row">
                     <div class="col-md-12">
                         <div id="msjAlert" role="alert">
                         </div>
+                        
                     </div>
                 </div>
+            </div>
 
-
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <label for="divImg" class="form-label">IMG</label>
+                 <div class="col-md-12 d-flex justify-content-center alert alert-secondary " id="divImg">
+                    
+                </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="Ocrtext" class="form-label">Texto Extraido.</label>
+                    <textarea id="Ocrtext" name="w3review" rows="12" class="form-control w-100"></textarea>
+                </div>
             </div>
         </div>
     </div>
     <footer id="footer-placeholder" class="footer text-muted">
     </footer>
 </body>
-
-</html>
